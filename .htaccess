@@ -1,0 +1,44 @@
+# BIT607 Web Development Assessment 2
+# Student: Matias Farfan 
+# ID number: 5114580
+
+# .htaccess file to password protect staff-roster.html
+
+# Enable authentication for staff-roster.html
+<Files "staff-roster.html">
+    # Set authentication type to Basic
+    AuthType Basic
+    
+    # Set the authentication realm message
+    AuthName "Staff Area - Login Required"
+    
+    # Specify the path to the password file
+    # CHANGE THIS LINE based on your setup:
+    
+    # For XAMPP (Windows):
+    # AuthUserFile C:/xampp/.htpasswd
+    
+    # For MAMP (Mac):
+    # AuthUserFile /Applications/MAMP/.htpasswd
+    
+    # For Web Server (find your path first):
+    AuthUserFilePath
+    
+    # Require valid user to access
+    Require valid-user
+</Files>
+
+# Additional security settings
+<IfModule mod_headers.c>
+    # Prevent clickjacking attacks
+    Header set X-Frame-Options "SAMEORIGIN"
+    
+    # Enable XSS protection
+    Header set X-XSS-Protection "1; mode=block"
+    
+    # Prevent MIME type sniffing
+    Header set X-Content-Type-Options "nosniff"
+</IfModule>
+
+# Disable directory browsing
+Options -Indexes

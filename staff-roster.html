@@ -1,0 +1,286 @@
+<!-- BIT607 Web Development Assessment 3
+Student: Matias Farfan 
+ID number: 5114580 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Staff roster and scheduling information for Snazzy Paws Grooming team members. Internal use only.">
+    
+    <title>Snazzy Paws Grooming - Staff Roster</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styless.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid px-4">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="index.html">🐾 Snazzy Paws Grooming</a>
+                
+                <!-- Hamburger Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="booking.html">Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="staff-roster.html">Staff</a>
+                        </li>
+                    </ul>
+                    <!-- Book Now Button -->
+                    <a href="booking.html" class="btn header-book-btn">Book Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- STAFF ROSTER PAGE -->
+    <div id="staff-roster" class="page-content">
+        <div class="container py-5">
+            <!-- Page Header -->
+            <section class="mb-5">
+                <h2 class="text-center mb-4">Staff Roster</h2>
+                <div class="alert alert-info text-center" role="alert">
+                    <strong>Internal Use Only:</strong> This page is password protected and accessible to staff members only.
+                </div>
+            </section>
+
+            <!-- Weekly Roster Section -->
+            <section class="mb-5">
+                <h3 class="mb-4">Weekly Schedule - Week of November 11-17, 2025</h3>
+                
+                <!-- Roster Table -->
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover services-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Staff Member</th>
+                                <th scope="col">Monday</th>
+                                <th scope="col">Tuesday</th>
+                                <th scope="col">Wednesday</th>
+                                <th scope="col">Thursday</th>
+                                <th scope="col">Friday</th>
+                                <th scope="col">Saturday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Sarah Mitchell -->
+                            <tr>
+                                <td><strong>Sarah Mitchell</strong><br><small>Senior Groomer</small></td>
+                                <td>9:00 AM - 5:00 PM</td>
+                                <td>9:00 AM - 5:00 PM</td>
+                                <td>OFF</td>
+                                <td>9:00 AM - 5:00 PM</td>
+                                <td>9:00 AM - 5:00 PM</td>
+                                <td>9:00 AM - 3:00 PM</td>
+                            </tr>
+                            
+                            <!-- James Rodriguez -->
+                            <tr>
+                                <td><strong>James Rodriguez</strong><br><small>Groomer</small></td>
+                                <td>9:00 AM - 5:00 PM</td>
+                                <td>9:00 AM - 5:00 PM</td>
+                                <td>9:00 AM - 5:00 PM</td>
+                                <td>OFF</td>
+                                <td>9:00 AM - 5:00 PM</td>
+                                <td>OFF</td>
+                            </tr>
+                            
+                            <!-- Emily Chen -->
+                            <tr>
+                                <td><strong>Emily Chen</strong><br><small>Groomer</small></td>
+                                <td>OFF</td>
+                                <td>10:00 AM - 4:00 PM</td>
+                                <td>10:00 AM - 4:00 PM</td>
+                                <td>10:00 AM - 4:00 PM</td>
+                                <td>10:00 AM - 4:00 PM</td>
+                                <td>9:00 AM - 3:00 PM</td>
+                            </tr>
+                            
+                            <!-- Michael Thompson -->
+                            <tr>
+                                <td><strong>Michael Thompson</strong><br><small>Junior Groomer</small></td>
+                                <td>10:00 AM - 3:00 PM</td>
+                                <td>OFF</td>
+                                <td>10:00 AM - 3:00 PM</td>
+                                <td>10:00 AM - 3:00 PM</td>
+                                <td>OFF</td>
+                                <td>10:00 AM - 4:00 PM</td>
+                            </tr>
+                            
+                            <!-- Lisa Park -->
+                            <tr>
+                                <td><strong>Lisa Park</strong><br><small>Reception/Admin</small></td>
+                                <td>8:30 AM - 5:30 PM</td>
+                                <td>8:30 AM - 5:30 PM</td>
+                                <td>8:30 AM - 5:30 PM</td>
+                                <td>8:30 AM - 5:30 PM</td>
+                                <td>8:30 AM - 5:30 PM</td>
+                                <td>8:30 AM - 3:30 PM</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Staff Contact Information -->
+            <section class="mb-5">
+                <h3 class="mb-4">Staff Contact Information</h3>
+                
+                <div class="row g-4">
+                    <!-- Sarah Mitchell -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card info-card border-0 h-100">
+                            <div class="card-body">
+                                <h4 class="card-title h6">Sarah Mitchell</h4>
+                                <p class="mb-1"><strong>Position:</strong> Senior Groomer</p>
+                                <p class="mb-1"><strong>Email:</strong> sarah@snazzypaws.co.nz</p>
+                                <p class="mb-1"><strong>Ext:</strong> 101</p>
+                                <p class="mb-0"><small>Specializes in large breeds and show cuts</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- James Rodriguez -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card info-card border-0 h-100">
+                            <div class="card-body">
+                                <h4 class="card-title h6">James Rodriguez</h4>
+                                <p class="mb-1"><strong>Position:</strong> Groomer</p>
+                                <p class="mb-1"><strong>Email:</strong> james@snazzypaws.co.nz</p>
+                                <p class="mb-1"><strong>Ext:</strong> 102</p>
+                                <p class="mb-0"><small>Specializes in senior dog care</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Emily Chen -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card info-card border-0 h-100">
+                            <div class="card-body">
+                                <h4 class="card-title h6">Emily Chen</h4>
+                                <p class="mb-1"><strong>Position:</strong> Groomer</p>
+                                <p class="mb-1"><strong>Email:</strong> emily@snazzypaws.co.nz</p>
+                                <p class="mb-1"><strong>Ext:</strong> 103</p>
+                                <p class="mb-0"><small>Specializes in small breeds and spa treatments</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Michael Thompson -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card info-card border-0 h-100">
+                            <div class="card-body">
+                                <h4 class="card-title h6">Michael Thompson</h4>
+                                <p class="mb-1"><strong>Position:</strong> Junior Groomer</p>
+                                <p class="mb-1"><strong>Email:</strong> michael@snazzypaws.co.nz</p>
+                                <p class="mb-1"><strong>Ext:</strong> 104</p>
+                                <p class="mb-0"><small>Currently training in all grooming services</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Lisa Park -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card info-card border-0 h-100">
+                            <div class="card-body">
+                                <h4 class="card-title h6">Lisa Park</h4>
+                                <p class="mb-1"><strong>Position:</strong> Reception/Admin</p>
+                                <p class="mb-1"><strong>Email:</strong> lisa@snazzypaws.co.nz</p>
+                                <p class="mb-1"><strong>Ext:</strong> 100</p>
+                                <p class="mb-0"><small>Main reception and booking coordinator</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Important Notes -->
+            <section class="mb-5">
+                <h3 class="mb-4">Important Notes</h3>
+                
+                <div class="row g-3">
+                    <div class="col-12">
+                        <div class="alert alert-warning" role="alert">
+                            <h5 class="alert-heading">🔔 Shift Changes</h5>
+                            <p class="mb-0">Please notify management at least 48 hours in advance for any shift change requests.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="alert alert-success" role="alert">
+                            <h5 class="alert-heading">✅ Break Schedule</h5>
+                            <p class="mb-0">All staff are entitled to a 30-minute lunch break and two 15-minute breaks during full shifts.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="col-12">
+                        <div class="alert alert-primary" role="alert">
+                            <h5 class="alert-heading">📋 Time Sheets</h5>
+                            <p class="mb-0">Time sheets must be submitted by Friday 5:00 PM each week for payroll processing.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-white text-center py-4">
+        <div class="container">
+            <!-- Footer Links -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap justify-content-center gap-3 footer-links">
+                        <a href="./index.html" class="text-white text-decoration-none">Home</a>
+                        <a href="./services.html" class="text-white text-decoration-none">Services</a>
+                        <a href="./gallery.html" class="text-white text-decoration-none">Gallery</a>
+                        <a href="./booking.html" class="text-white text-decoration-none">Booking</a>
+                        <a href="./contact.html" class="text-white text-decoration-none">Contact</a>
+                        <a href="./privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Information -->
+            <div class="row">
+                <div class="col-12">
+                    <p class="mb-2">&copy; 2025 Snazzy Paws Grooming. All rights reserved.</p>
+                    <p class="mb-2">Hamilton, New Zealand | Phone: (07) 123-4567 | Email: info@snazzypaws.co.nz</p>
+                    <p class="mb-0">Opening Hours: Monday - Saturday 9:00 AM - 5:00 PM | Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

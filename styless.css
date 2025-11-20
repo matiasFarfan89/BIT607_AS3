@@ -1,0 +1,761 @@
+/* BIT607 Web Development Assessment 3 
+Student: Matias Farfan 
+ID number: 5114580 */
+
+/* ===================================
+   Snazzy Paws Grooming - Styles
+   Professional Dog Grooming Website
+   Bootstrap Compatible Version
+   =================================== */
+
+/* ===================================
+   CSS VARIABLES & RESET
+   =================================== */
+
+/* Define custom color palette */
+:root {
+    /* Pastel palette with accessible contrast */
+    --color-navy: #1A2A4F;     /* dark navy for strong contrast */
+    --color-pink: #F7A5A5;     /* pastel pink accent */
+    --color-peach: #FFDBB6;    /* soft peach surface */
+    --color-cream: #FFF2EF;    /* light cream background */
+    --color-text: #1A2A4F;     /* primary text */
+    --color-white: #ffffff;    /* white */
+}
+
+/* Reset default margins and set base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body base styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-cream);
+}
+
+/* ===================================
+   TYPOGRAPHY
+   =================================== */
+
+/* Heading styles with proper hierarchy */
+h1, h2, h3, h4, h5, h6 {
+    line-height: 1.3;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-navy);
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-navy);
+}
+
+/* Paragraph styles */
+p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* ===================================
+   HEADER AND NAVIGATION
+   =================================== */
+
+/* Main header with gradient background */
+header {
+    background: linear-gradient(135deg, var(--color-navy) 0%, #2a3a5f 100%);
+    color: var(--color-white);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar overrides for custom styling */
+.navbar {
+    padding: 1rem 0;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffffff !important;
+    transition: opacity 0.3s ease;
+}
+
+.logo:hover {
+    opacity: 0.9;
+}
+
+/* Navigation link styling */
+.nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem !important;
+    position: relative;
+}
+
+/* Underline effect on nav links */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: calc(100% - 2rem);
+}
+
+.nav-link:hover {
+    opacity: 0.85;
+}
+
+/* Active nav link indicator */
+.nav-link.active {
+    font-weight: 600;
+}
+
+/* Header Book Now Button */
+.header-book-btn {
+    background: var(--color-pink) !important;
+    color: var(--color-navy) !important;
+    padding: 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(247, 165, 165, 0.4);
+    border: 2px solid transparent;
+    white-space: nowrap;
+}
+
+.header-book-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(247, 165, 165, 0.6);
+    background: var(--color-white) !important;
+    border-color: var(--color-pink);
+    color: var(--color-navy) !important;
+}
+
+/* ===================================
+   HERO SECTION
+   =================================== */
+
+/* Hero section with background image */
+.hero {
+    background-image: 
+        linear-gradient(180deg, rgba(63, 63, 63, 0), rgba(0, 0, 0, 0.35)),
+        url('./assets/images/hero2.jpg');
+    background-size: cover;
+    background-position: center 20%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    padding: 14rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 500px;
+}
+
+/* Decorative pattern overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 30px 30px;
+    opacity: 0.3;
+}
+
+/* Hero heading with shadow for readability */
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+}
+
+/* Hero paragraph styling */
+.hero p {
+    font-size: 1.4rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+    z-index: 1;
+    color: #ffffff;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Call-to-action button */
+.cta-button {
+    display: inline-block;
+    background: var(--color-pink);
+    color: var(--color-navy);
+    padding: 1.2rem 3rem;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(247, 165, 165, 0.4);
+    position: relative;
+    z-index: 1;
+    border: 2px solid transparent;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(247, 165, 165, 0.6);
+    background: var(--color-white);
+    border-color: var(--color-pink);
+    color: var(--color-navy);
+}
+
+/* ===================================
+   SECTIONS
+   =================================== */
+
+/* Section headings with underline */
+section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+/* Decorative underline for section headings */
+section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--color-pink), var(--color-peach));
+    border-radius: 2px;
+}
+
+/* ===================================
+   FEATURE CARDS
+   =================================== */
+
+/* Feature card styling */
+.feature-card {
+    background: var(--color-cream);
+    padding: 2.5rem;
+    border-radius: 15px;
+    border: 2px solid var(--color-peach);
+    text-align: center;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Feature card hover effect */
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(247, 165, 165, 0.25);
+    border-color: var(--color-pink);
+}
+
+/* Feature icon styling */
+.feature-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+/* Feature card text */
+.feature-card h3 {
+    margin-bottom: 1rem;
+    color: var(--color-navy);
+}
+
+.feature-card p {
+    color: var(--color-navy);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* ===================================
+   INFO CARDS
+   =================================== */
+
+/* Info card with left border accent */
+.info-card {
+    background: var(--color-cream);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--color-pink);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 1.5rem;
+}
+
+.info-card h3 {
+    margin-bottom: 1rem;
+    color: var(--color-navy);
+    font-size: 1.3rem;
+}
+
+.info-card p {
+    color: var(--color-navy);
+    margin-bottom: 0.5rem;
+}
+
+.info-card strong {
+    color: var(--color-navy);
+    font-weight: 600;
+}
+
+/* ===================================
+   TESTIMONIALS
+   =================================== */
+
+/* Testimonial card styling */
+.testimonial {
+    background: var(--color-cream);
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 5px solid var(--color-peach);
+    margin: 1.5rem 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+/* Testimonial hover effect */
+.testimonial:hover {
+    transform: translateX(5px);
+}
+
+/* Testimonial text */
+.testimonial p {
+    font-style: italic;
+    color: var(--color-navy);
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+
+/* Testimonial author */
+.testimonial .author {
+    font-weight: 600;
+    color: var(--color-navy);
+    text-align: right;
+    font-style: normal;
+    font-size: 1rem;
+}
+
+/* ===================================
+   SERVICES TABLE
+   =================================== */
+
+/* Services table custom styling */
+.services-table {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table header with gradient */
+.services-table thead th {
+    background: linear-gradient(135deg, var(--color-navy) 0%, #2a3a5f 100%);
+    color: var(--color-white);
+    padding: 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border: none;
+}
+
+/* Table data cells */
+.services-table td {
+    padding: 1.2rem;
+    background: var(--color-white);
+    color: var(--color-navy);
+}
+
+/* Table row hover effect */
+.services-table tbody tr:hover {
+    background: var(--color-cream) !important;
+}
+
+/* Price column styling */
+.price {
+    font-weight: 700;
+    color: var(--color-pink);
+    font-size: 1.15rem;
+    white-space: nowrap;
+}
+
+/* ===================================
+   GALLERY GRID
+   =================================== */
+
+/* Gallery item container */
+.gallery-item {
+    aspect-ratio: 1;
+    background: linear-gradient(135deg, var(--color-peach) 0%, var(--color-pink) 100%);
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Gallery image styling */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Gallery item hover effect */
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(247, 165, 165, 0.35);
+}
+
+/* ===================================
+   FORMS
+   =================================== */
+
+/* Form container override */
+form {
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Form label styling */
+label {
+    font-weight: 600;
+    color: #2d3748;
+    font-size: 1rem;
+}
+
+/* Form input styling */
+.form-control,
+.form-select {
+    padding: 0.9rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #ffffff;
+    color: #2d3748;
+}
+
+/* Form input focus state */
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--color-pink);
+    box-shadow: 0 0 0 3px rgba(247, 165, 165, 0.25);
+}
+
+/* Textarea minimum height */
+textarea.form-control {
+    min-height: 130px;
+    line-height: 1.6;
+}
+
+/* Submit button styling */
+.submit-button {
+    background: linear-gradient(135deg, var(--color-pink) 0%, #f28e8e 100%);
+    color: var(--color-navy);
+    padding: 1.1rem 3rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(247, 165, 165, 0.4);
+}
+
+.submit-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(247, 165, 165, 0.6);
+    color: var(--color-navy);
+}
+
+.submit-button:active {
+    transform: translateY(-1px);
+}
+
+/* Form note styling */
+.form-note {
+    text-align: center;
+    color: #718096;
+    font-size: 0.95rem;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+/* ===================================
+   MAP CONTAINER
+   =================================== */
+
+/* Google Maps iframe container */
+.map-container {
+    width: 100%;
+    height: 450px;
+    background: var(--color-peach);
+    border-radius: 15px;
+    margin: 3rem 0;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ===================================
+   FOOTER
+   =================================== */
+
+/* Footer with gradient background */
+footer {
+    background: linear-gradient(135deg, var(--color-navy) 0%, #2a3a5f 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 5rem;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer links container */
+.footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+/* Footer link underline effect */
+.footer-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-links a:hover {
+    opacity: 0.85;
+}
+
+/* Footer text styling */
+footer p {
+    color: #ffffff;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+    opacity: 0.9;
+}
+
+/* ===================================
+   PAGE ANIMATIONS
+   =================================== */
+
+/* Page content visibility */
+.page-content {
+    animation: fadeIn 0.4s ease;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* Tablet breakpoint (max-width: 968px) */
+@media (max-width: 968px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile breakpoint (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Hide desktop book button on mobile */
+    .header-book-btn {
+        display: none;
+    }
+
+    /* Hero section adjustments */
+    .hero {
+        padding: 5rem 1.5rem;
+        min-height: 400px;
+        background-attachment: scroll;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Map adjustments */
+    .map-container {
+        height: 300px;
+    }
+}
+
+/* Small mobile breakpoint (max-width: 480px) */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero {
+        min-height: 350px;
+        padding: 4rem 1rem;
+    }
+
+    /* Make table scrollable on very small screens */
+    .services-table {
+        font-size: 0.85rem;
+        display: block;
+        overflow-x: auto;
+    }
+
+    /* Form adjustments */
+    form {
+        padding: 1.2rem;
+    }
+
+    .submit-button {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+}
+
+/* ===================================
+   ACCESSIBILITY ENHANCEMENTS
+   =================================== */
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 3px solid var(--color-pink);
+    outline-offset: 2px;
+}
+
+/* Skip to main content link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #2d3748;
+    color: #ffffff;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+    /* Hide interactive elements when printing */
+    header,
+    footer,
+    .cta-button,
+    .header-book-btn,
+    form,
+    .navbar-toggler {
+        display: none;
+    }
+
+    body {
+        color: #000000;
+        background: #ffffff;
+    }
+
+    .page-content {
+        display: block !important;
+    }
+}

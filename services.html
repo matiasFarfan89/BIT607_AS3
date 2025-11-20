@@ -1,0 +1,241 @@
+<!-- BIT607 Web Development Assessment 3
+Student: Matias Farfan 
+ID number: 5114580 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore our comprehensive dog grooming services including baths, haircuts, spa packages, and specialized care for senior dogs and puppies in Hamilton, NZ.">
+    
+    <title>Snazzy Paws Grooming - Services</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./styless.css">
+</head>
+<body>
+    
+    <!-- HEADER -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid px-4">
+                <!-- Logo -->
+                <a class="navbar-brand logo" href="index.html">🐾 Snazzy Paws Grooming</a>
+                
+                <!-- Hamburger Toggle Button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Navigation Links -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="booking.html">Booking</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="privacy-policy.html">Privacy Policy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="staff-roster.html">Staff</a>
+                        </li>
+                    </ul>
+                    <!-- Book Now Button -->
+                    <a href="booking.html" class="btn header-book-btn">Book Now</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- SERVICES PAGE -->
+    <div id="services" class="page-content">
+        <div class="container py-5">
+            <!-- Services Introduction -->
+            <section class="mb-5">
+                <h2 class="text-center mb-4">Our Grooming Services</h2>
+                <p class="text-center lead">We offer a comprehensive range of professional grooming services tailored to your dog's needs.</p>
+
+                <!-- Services Table -->
+                <div class="table-responsive mt-4">
+                    <table class="table table-hover services-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Service</th>
+                                <th scope="col">Description</th>
+                                <th scope="col">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Bath and Brush -->
+                            <tr>
+                                <td><strong>Bath and Brush</strong></td>
+                                <td>Shampoo, blow-dry, brush-out and nail trim</td>
+                                <td class="price">$25 - $50</td>
+                            </tr>
+                            
+                            <!-- Haircut -->
+                            <tr>
+                                <td><strong>Haircut</strong></td>
+                                <td>Bath, blow-dry, haircut (breed standard or owner's preference) and nail trim</td>
+                                <td class="price">$45 - $85</td>
+                            </tr>
+                            
+                            <!-- Full Grooming Package -->
+                            <tr>
+                                <td><strong>Full Grooming Package</strong></td>
+                                <td>Comprehensive service including bath, haircut, teeth brushing, nail trim and ear cleaning</td>
+                                <td class="price">$60 - $120</td>
+                            </tr>
+                            
+                            <!-- Spa Package -->
+                            <tr>
+                                <td><strong>Spa Package</strong></td>
+                                <td>Bath, haircut, teeth brushing, nail trim and special scents or conditioners</td>
+                                <td class="price">$75 - $150</td>
+                            </tr>
+                            
+                            <!-- Senior Dog Package -->
+                            <tr>
+                                <td><strong>Senior Dog Package</strong></td>
+                                <td>Grooming services tailored for older dogs with special handling and care</td>
+                                <td class="price">$40 - $80</td>
+                            </tr>
+                            
+                            <!-- Puppy Package -->
+                            <tr>
+                                <td><strong>Puppy Package</strong></td>
+                                <td>Introductory grooming services tailored for puppies</td>
+                                <td class="price">$30 - $60</td>
+                            </tr>
+                            
+                            <!-- Nail Trim -->
+                            <tr>
+                                <td><strong>Nail Trim</strong></td>
+                                <td>Trim nails and filing</td>
+                                <td class="price">$10 - $20</td>
+                            </tr>
+                            
+                            <!-- Ear Cleaning -->
+                            <tr>
+                                <td><strong>Ear Cleaning</strong></td>
+                                <td>Gentle cleaning of ears to remove wax and debris</td>
+                                <td class="price">$10 - $15</td>
+                            </tr>
+                            
+                            <!-- Teeth Brushing -->
+                            <tr>
+                                <td><strong>Teeth Brushing</strong></td>
+                                <td>Brushing with pet-safe toothpaste</td>
+                                <td class="price">$10 - $15</td>
+                            </tr>
+                            
+                            <!-- De-shedding Treatment -->
+                            <tr>
+                                <td><strong>De-shedding Treatment</strong></td>
+                                <td>Special shampoo and undercoat removal (in addition to bath or haircut)</td>
+                                <td class="price">+$20 - $40</td>
+                            </tr>
+                            
+                            <!-- Medicated Bath -->
+                            <tr>
+                                <td><strong>Medicated Bath</strong></td>
+                                <td>For pets with skin conditions requiring special shampoo (additional charge)</td>
+                                <td class="price">+$20 - $40</td>
+                            </tr>
+                            
+                            <!-- Flea and Tick Treatment -->
+                            <tr>
+                                <td><strong>Flea and Tick Treatment</strong></td>
+                                <td>Shampoo and preventative treatment</td>
+                                <td class="price">$15 - $30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Our Expert Team Section -->
+            <section class="mb-5">
+                <h2 class="text-center mb-5">Our Expert Team</h2>
+                
+                <div class="row g-4">
+                    <!-- Certified Groomers Card -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card feature-card h-100 text-center border-0">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Certified Groomers</h3>
+                                <p class="card-text">Our team consists of professionally trained and certified dog groomers with extensive experience in all breeds.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Specialized Training Card -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card feature-card h-100 text-center border-0">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Specialized Training</h3>
+                                <p class="card-text">Staff trained in senior dog care, medical grooming requirements, and breed-specific styling techniques.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Passionate Care Card -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card feature-card h-100 text-center border-0">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Passionate Care</h3>
+                                <p class="card-text">We're dog lovers first, ensuring every pet receives gentle, patient, and loving treatment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-white text-center py-4">
+        <div class="container">
+            <!-- Footer Links -->
+            <div class="row mb-3">
+                <div class="col-12">
+                    <div class="d-flex flex-wrap justify-content-center gap-3 footer-links">
+                        <a href="./index.html" class="text-white text-decoration-none">Home</a>
+                        <a href="./services.html" class="text-white text-decoration-none">Services</a>
+                        <a href="./gallery.html" class="text-white text-decoration-none">Gallery</a>
+                        <a href="./booking.html" class="text-white text-decoration-none">Booking</a>
+                        <a href="./contact.html" class="text-white text-decoration-none">Contact</a>
+                        <a href="./privacy-policy.html" class="text-white text-decoration-none">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Information -->
+            <div class="row">
+                <div class="col-12">
+                    <p class="mb-2">&copy; 2025 Snazzy Paws Grooming. All rights reserved.</p>
+                    <p class="mb-2">Hamilton, New Zealand | Phone: (07) 123-4567 | Email: info@snazzypaws.co.nz</p>
+                    <p class="mb-0">Opening Hours: Monday - Saturday 9:00 AM - 5:00 PM | Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
